@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <datalist id="browsers"> 
+    <optionvalue="Firefox"> 
+    <optionvalue="Chrome"> 
+    <optionvalue="Opera"> 
+    <optionvalue="Safari"> 
+    </datalist>
+    <style>
+        .contact-form {
+            width: 450px;
+        }
+        .contact-info {
+            float: left;
+            width: 50%;
+        }
+        .contact-method {
+            float: right;
+            width: 50%;
+        }
+        .feedback-form {
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="contact-form">
+        <legend>Contact Information:</legend>
+        <div class="contact-info">
+            <form method="post" action="/submit_form">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="firstname" value=""><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lastname" value=""><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" value=""><br>
+                <label for="telephone">Telephone:</label><br>
+                <input type="tel" id="telephone" name="telephone" value=""><br>
+            </form>
+        </div>
+        <div class="contact-method">
+            <form method="post" action="/submit_form">
+                <legend>Preferred contact method:</legend>
+                <input type="checkbox" id="email" name="contact" value="email" checked>
+                <label for="email">Email</label><br>
+                <input type="checkbox" id="telephone" name="contact" value="telephone">
+                <label for="telephone">Telephone</label><br>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="feedback-form">
+        <legend>Feedback:</legend>
+        <form method="post" action="/submit_form">
+            <label for="subject">Message subject:</label>
+            <input type="text" id="subject" name="subject" value=""><br>
+            <textarea id="message" name="message" rows="15" cols="50"></textarea><br>
+            <label for="file">Attach a file:</label> 
+            <input type="file" id="file" name="file"><br>
+            <input type="submit" value="Send">
+        </form>
+    </fieldset>
+</body>
+</html>
