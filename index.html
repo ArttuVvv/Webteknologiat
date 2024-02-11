@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us</title>
-    <datalist id="browsers"> 
-    <optionvalue="Firefox"> 
-    <optionvalue="Chrome"> 
-    <optionvalue="Opera"> 
-    <optionvalue="Safari"> 
-    </datalist>
-    <style>
-        .contact-form {
-            width: 450px;
-        }
-        .contact-info {
-            float: left;
-            width: 50%;
-        }
-        .contact-method {
-            float: right;
-            width: 50%;
-        }
-        .feedback-form {
-            width: 450px;
-        }
-    </style>
+    <title>Lomake-esimerkki</title>
 </head>
 <body>
-    <fieldset class="contact-form">
-        <legend>Contact Information:</legend>
-        <div class="contact-info">
-            <form method="post" action="/submit_form">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="firstname" value=""><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lastname" value=""><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" value=""><br>
-                <label for="telephone">Telephone:</label><br>
-                <input type="tel" id="telephone" name="telephone" value=""><br>
-            </form>
-        </div>
-        <div class="contact-method">
-            <form method="post" action="/submit_form">
-                <legend>Preferred contact method:</legend>
-                <input type="checkbox" id="email" name="contact" value="email" checked>
-                <label for="email">Email</label><br>
-                <input type="checkbox" id="telephone" name="contact" value="telephone">
-                <label for="telephone">Telephone</label><br>
-            </form>
-        </div>
-    </fieldset>
-    <fieldset class="feedback-form">
-        <legend>Feedback:</legend>
-        <form method="post" action="/submit_form">
-            <label for="subject">Message subject:</label>
-            <input type="text" id="subject" name="subject" value=""><br>
-            <textarea id="message" name="message" rows="15" cols="50"></textarea><br>
-            <label for="file">Attach a file:</label> 
-            <input type="file" id="file" name="file"><br>
-            <input type="submit" value="Send">
-        </form>
-    </fieldset>
+    <form>
+        <fieldset>
+            <legend>Contact information</legend>
+            <table>
+                <tr>
+                    <td> <label>Firstname</label></td>
+                    <td><input type="text" id="fname" name="fname"></td>
+                    <td colspan="2">Preferred contact method:</label>
+                </tr>
+                
+                <tr>
+                    <td> <label>Lastname:</label></td>
+                    <td> <input type="text" id="sname" name="sname"></td>
+                    <td><input type="checkbox" id="method1" name="method1" value="Email">
+                        <labelfor="method1">Email:</label>
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="text" id="email" email="email"></td>
+                    <td><input type="checkbox" id="vehicle2" name="method2" value="Phone"><label for="method2">Phone:
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label>Telephone</label></td>
+                    <td><input type="text" id="phone" email="phone"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <table>
+                <tr>
+                    <td><label>Message subject:</label></td>
+                    <td><input type="text" id="fmessage" message="fmessage"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td> <textarea name="message" rows="15" cols="50"></textarea></td>
+                </tr>
+            </table>
+
+            <tr>
+                <td><label>Attach file</label></td>
+                <td><input type="file"></td>
+            </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><input type="submit" value="send"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </form>
+
+
 </body>
 </html>
